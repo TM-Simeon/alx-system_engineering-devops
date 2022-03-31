@@ -1,1 +1,2 @@
-#!/bin/bash
+#!/bin/bash \n
+Display the contents list of your current directory
