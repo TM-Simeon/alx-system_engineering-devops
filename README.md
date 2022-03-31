@@ -1,2 +1,2 @@
-#!/bin/bash \n
+#!/bin/bash
 what is there
