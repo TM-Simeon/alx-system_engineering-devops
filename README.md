@@ -1,2 +1,2 @@
 #!/bin/bash
-what is there
+what is there \n
