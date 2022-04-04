@@ -1,2 +1,2 @@
 #!/bin/bash
-heat -3 iacta | tail +3 
+heat -n 3 iacta | tail -n 1 
