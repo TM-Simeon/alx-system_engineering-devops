@@ -1,1 +1,29 @@
 https://drive.google.com/file/d/1XVmYsA0U_w05Y68I9cLMh3R8bF4yx9hO/view?usp=sharing
+
+
+The client represents the web user.
+The load balancer takes the queries from the clients and distributes them across the different servers available following a load balancer algorithm.
+The server represents the web server which enables the client to access the database
+The application files are the files the client can access
+Questions and answers:
+What is a server: a server is a host computer that files
+What is the role of domain name: domain name is usually an alias for an ip address, a domain name is converted to an IP address and used to direct queries to a particular domain
+what type of DNS record www is in www.foobar.com: this is an A record, it allows you to use mnemonic names such as www.foobar.com to represent IP addresses like 127.0.0.1 this method works as an alias an maps one name to another
+What is a web server: this is a server that handles queries from a client and supplies static web pages upon request
+What is the role of application server:?
+This is a server used to handle web applications
+What is the role of the database?
+This is a server used to store data for access by the client
+What is the server using to communicate with the computer of the user requesting the website?
+ this is done by the web server
+
+SPOF: single point of failure
+This is a single component of the web architecture that when affected, the whole system fails, hence the name single point of failure
+A system with a single point of failure is unsafe since client access to data is lost or in worse cases, entire data itself is lost upon the failure of such component.
+
+Downtime when maintenance needed:
+Architectures with a single server or data base usually experience downtime when maintenance is needed, this is because the server or database which is the only server or database is being maintained
+
+Cannot scale too much incoming traffic:
+A single server with a lamp stack cannot scale too much traffic unlike multiple servers. This is first because the single server must be situated in one location which makes it far from some clients. Secondly all queries and directed to the same server at all times.
+
