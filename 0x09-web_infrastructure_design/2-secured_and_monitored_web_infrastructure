@@ -1,0 +1,22 @@
+https://drive.google.com/file/d/1VisrPkc-Tr1pek_158WpaQLLO-wWo4d7/view?usp=sharing
+
+Firewalls are added to denial access to clients that are not allowed on the server.
+SSL certificate is added to create room to secure the transmitted data between the server and the client. The certificate allows for encryption of the data.
+Monitoring clients collect data from the servers and present the metrics for visualization by the engineers
+What are firewalls used for?
+Firewalls are used to block traffic from un-allowed IP addresses
+Why is the traffic served over HTTPS?
+http is not secured, as the content being transferred can be access by a third party, usually a hacker, to minimize this loophole, https provides a more secured option as the data is secured via SSL (secure socket layer) a third party accessing the data won’t be able to decrypt it
+What monitoring is used for?
+Monitoring is used to collect health and performance data from servers, virtual machines, containers, databases, and other backend components in a stack
+How the monitoring tool collects data
+When monitoring tools are connected to the target, they fetch data from the target in the form of metrics and display the data in a readable fashion to the viewer. If the data on the target is not in the form compatible with the monitoring tool, an exporter is used to fetch the data. Exporters present the data in a format compatible with the monitoring tool.
+Explain what to do if you want to monitor your web server QPS
+Connect the web server as a target to a monitoring tool and get the metrics from the monitoring tool. Some examples of monitoring tools are Prometheus, SAM (server and applications manager) etc.
+Why terminating SSL at the load balancer level is an issue
+From the load balancer to the server, the data can be access by a third party, so if the data is decrypted at the load balancer and send to the servers, it ceases to be secure from the load balancer
+Why having only one MySQL server capable of accepting writes is an issue
+A single mysql server makes it a single point of failure (SPOF), although this server will be able to serve, but the threat is that if at any point it fails, the whole system fails.
+Why having servers with all the same components (database, web server and application server) might be a problem
+When servers have all the components, for homogeneity, the servers need to be synchronized always which poses so much cost.
+
