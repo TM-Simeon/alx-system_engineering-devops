@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+string1="am fine\nwhat are you doing?"
+echo -e "$string1: is the value"

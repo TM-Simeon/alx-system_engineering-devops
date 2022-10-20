@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+string1="am fine\nwhat are you doing?"
+echo -e "it should
+ be like this: is the value"
