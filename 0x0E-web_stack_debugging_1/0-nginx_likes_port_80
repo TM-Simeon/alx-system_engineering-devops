@@ -2,10 +2,11 @@
 # Command to make an nginx server listen on port 80
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo apt-get remove --purge iptables
-sudo apt-get -y install iptables ufw apache2-mpm worker
+sudo apt-get -y install ufw curl
+sudo ufw allow 'Nginx HTTP'
 #sudo ufw allow 'Nginx HTTP'
 #sudo chmod 777 /etc/nginx/sites-enabled/default
 #sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 #sudo service nginx start
-sudo service apache2 start
+sudo service nginx start
+curl 0:80
