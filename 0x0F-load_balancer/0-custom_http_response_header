@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu server with a custom HTTP header response
+sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+service nginx restart
