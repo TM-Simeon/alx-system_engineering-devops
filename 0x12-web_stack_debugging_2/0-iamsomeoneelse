@@ -2,10 +2,10 @@
 # Run software as another user
 if [[ $# -lt 1 ]]
 then
-	sudo su -c 'echo $(whoami)'
+	sudo su -s /bin/bash -c 'whoami'
 elif [[ $# -eq 1 ]]
 then
-	su -c 'echo $(whoami)' $1
+	su "$1" -s /bin/bash -c 'whoami'
 else
 	echo 'Too many arguments'
 fi
