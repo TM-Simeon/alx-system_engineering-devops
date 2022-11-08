@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Run software as another user
+if [[ $# -lt 1 ]]
+then
+	sudo su -c 'echo $(whoami)'
+elif [[ $# -eq 1 ]]
+then
+	su -c 'echo $(whoami)' $1
+else
+	echo 'Too many arguments'
+fi
