@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run Nginx as nginx on a web server
-sed -i "li user nginx;" /etc/nginx/nginx.conf
+sed -i "1i user nginx;" /etc/nginx/nginx.conf
 sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 chmod 777 /etc/nginx/nginx.conf
 pkill -f apache2
