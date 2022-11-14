@@ -21,6 +21,6 @@ if __name__ == '__main__':
         name, completed, (completed + notCompleted))
     )
     for todo in todos.json():
-        if todo.get('userId') == int(userid) and \
+        if todo.get('userId') == userId and \
                 todo.get('completed'):
-            print('\t\s{}'.format(todos.json().get('title')))
+            print('\t {}'.format(todo.get('title')))
