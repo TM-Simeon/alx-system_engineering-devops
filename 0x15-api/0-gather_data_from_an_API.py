@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# script to get information about an employee using rest api
+"""script to get information about an employee using rest api"""
 import requests
 import sys
 if __name__ == '__main__':
+    """only run code when ran as main"""
     userId = sys.argv[1]
     response = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(userId))
     name = response.json().get('name')
