@@ -6,14 +6,14 @@ if __name__ == '__main__':
     """only run code when ran as main"""
     userId = int(sys.argv[1])
     url = 'https://jsonplaceholder.typicode.com/users'
-    response = requests.get('url/{}'.format(userId))
+    response = requests.get("{}/{}".format(url, userId))
     name = response.json().get('name')
     todos = requests.get('https://jsonplaceholder.typicode.com/todos')
     notCompleted = 0
     completed = 0
     for todo in todos.json():
-        if todo.json().get('userId') == int(userId):
-            if todo.json().get('completed'):
+        if todo.get('userId') == userId:
+            if todo.get('completed'):
                 completed += 1
             else:
                 notCompleted += 1
@@ -21,6 +21,6 @@ if __name__ == '__main__':
         name, completed, (completed + notCompleted))
     )
     for todo in todos.json():
-        if todo.json().get('userId') == int(userid) and \
-                todo.json().get('completed'):
+        if todo.get('userId') == int(userid) and \
+                todo.get('completed'):
             print('\t\s{}'.format(todos.json().get('title')))
