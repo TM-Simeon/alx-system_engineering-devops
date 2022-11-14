@@ -5,8 +5,8 @@ import sys
 if __name__ == '__main__':
     """only run code when ran as main"""
     userId = sys.argv[1]
-    response = requests.get('https://jsonplaceholder.typicode.com/users/{}'
-               .format(userId))
+    url = 'https://jsonplaceholder.typicode.com/users'
+    response = requests.get('url/{}'.format(userId))
     name = response.json().get('name')
     todos = requests.get('https://jsonplaceholder.typicode.com/todos')
     notCompleted = 0
