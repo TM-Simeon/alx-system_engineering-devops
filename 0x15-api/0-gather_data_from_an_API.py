@@ -17,8 +17,9 @@ if __name__ == '__main__':
                 completed += 1
             else:
                 notCompleted += 1
-    print('Employee {} is done with tasks({}/{}):\n'.format(name,
-           completed, (completed + notCompleted)))
+    print('Employee {} is done with tasks({}/{}):\n'.format(
+        name,completed, (completed + notCompleted))
+    )
     for todo in todos.json():
         if todo.json().get('userId') == int(userid) and \
                 todo.json().get('completed'):
