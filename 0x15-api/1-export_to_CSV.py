@@ -31,7 +31,7 @@ if __name__ == '__main__':
     todos = requests.get("{}/todos".format(url)).json()
     for todo in todos:
         if todo.get('userId') == userId:
-    # data = ["firstname", "second name", "thirdname"]
+            # data = ["firstname", "second name", "thirdname"]
             data = ["{}".format(userId), "{}".format(user.get('username')),
                     "{}".format(todo.get('completed')),
                     "{}".format(todo.get('title'))]
@@ -39,4 +39,3 @@ if __name__ == '__main__':
                 writer = csv.writer(f, delimiter=',',
                                     quotechar='"', quoting=csv.QUOTE_ALL)
                 writer.writerow(data)
-
